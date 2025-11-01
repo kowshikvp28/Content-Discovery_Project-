@@ -1,0 +1,17 @@
+/* --- Import Fonts & Define Theme --- */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Montserrat:wght@400;600;700&family=Bebas+Neue&display=swap');
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+  box-sizing: border-box;
+  flex-grow: 1; /* Ensures footer stays at the bottom */
+}

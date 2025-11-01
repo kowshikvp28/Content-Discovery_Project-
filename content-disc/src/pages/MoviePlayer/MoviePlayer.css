@@ -1,0 +1,213 @@
+.player-page {
+  --main-bg: #181B1F;
+  --card-bg: #23282E;
+  --title-color: #D4C29A;
+  --text-color: #EAEAEA;
+  --accent-hover: #e0b236;
+}
+
+.player-page {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: 'Montserrat', sans-serif;
+  padding-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+.player-container {
+  width: 100%;
+  background-color: #000;
+  aspect-ratio: 16 / 9;
+  position: relative;
+}
+
+.player-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  border: 2px dashed #333;
+  box-sizing: border-box;
+  background-color: #0a0a0a;
+}
+.video-placeholder p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.video-placeholder.error p {
+  color: #ff8a8a;
+}
+
+.player-details-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.player-movie-info {
+  border-bottom: 1px solid #3a4149;
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.player-movie-title {
+  font-family: 'Righteous', cursive;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0 0 0.5rem 0;
+}
+
+.player-movie-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c5c8d0;
+  margin-bottom: 1.5rem;
+}
+
+.meta-divider {
+  color: #555;
+}
+
+.player-movie-synopsis {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #c5c8d0;
+  max-width: 800px;
+}
+
+.up-next-section h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 2rem;
+  color: var(--title-color);
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #3a4149;
+  display: inline-block;
+}
+
+.up-next-list {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1.5rem;
+  scrollbar-width: none;
+}
+.up-next-list::-webkit-scrollbar {
+  display: none;
+}
+
+.up-next-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 250px;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.up-next-card:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.up-next-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.up-next-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8) 10%, transparent 70%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.up-next-card:hover .up-next-card-overlay {
+  opacity: 1;
+}
+
+.up-next-card-overlay p {
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.loading-state, .error-state {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #a0a6b1;
+}
+.error-state {
+  color: #ff8a8a;
+}
+
+@media (max-width: 768px) {
+  .player-details-content {
+    padding: 2rem 1.5rem;
+  }
+  .player-movie-title {
+    font-size: 2.2rem;
+  }
+  .up-next-card {
+    width: 200px;
+  }
+}
+.video-js {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #000;
+}
+
+.vjs-control-bar {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+.vjs-big-play-button {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border: none !important;
+  border-radius: 50% !important;
+  width: 80px !important;
+  height: 80px !important;
+  font-size: 3rem !important;
+  color: #fff !important;
+  transition: background 0.3s;
+}
+
+.vjs-big-play-button:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.vjs-loading-spinner {
+  border-color: #e50914 !important; /* Netflix Red */
+}

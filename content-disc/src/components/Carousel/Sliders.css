@@ -1,0 +1,173 @@
+ .hero-slider-container {
+  --main-bg: #181B1F;
+  --card-bg: #23282E;
+  --title-color: #D4C29A;
+  --text-color: #EAEAEA;
+  --accent-hover: #e0b236;
+    margin:40px auto;
+    width: 95%;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    min-height: 100%;
+}
+
+.hero-slide-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+}
+
+.hero-slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.5;
+}
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8) 0%,
+    rgba(0,0,0,0.6) 25%,
+    rgba(0,0,0,0.0) 70%,
+    rgba(0,0,0,0.0) 100%
+  );
+  box-sizing: border-box;
+}
+
+.slide-caption h3 {
+  color: var(--title-color);
+  font-family: 'Righteous', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 10px 0px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+  opacity: 2;
+}
+
+.hero-slider-container .slick-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-slider-container .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hero-slider-container .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  /* background: transparent; */
+}
+
+.hero-slider-container .slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 7px; 
+  line-height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  content: '•'; 
+  text-align: center;
+  opacity: .5;
+  color: var(--text-color); 
+  transition: opacity 0.25s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-slider-container .slick-dots li.slick-active button:before {
+  opacity: 1; 
+  color: #948a6f; 
+}
+
+.slider-loading, .slider-error, .slider-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; 
+    width: 100%;
+    color: #a0a6b1;
+    font-style: italic;
+    font-size: 1.1rem;
+    background-color: var(--card-bg);
+    border-radius: 8px;
+}
+.slider-error {
+    color: #ff8a8a;
+}
+
+
+@media (max-width: 768px) {
+    .slide-caption h3 {
+        font-size: 1.5rem;
+    }
+    .hero-slider-container .slick-dots {
+        bottom: 10px;
+    }
+}
+
+.ticket-buttons {
+  
+  display: flex;
+  gap: 1rem;
+ 
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.ticket-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.7rem;
+  color: #3D2B1F; 
+  background-color: #f3e5ab; 
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 4px;
+}
+.ticket-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ticket-icon {
+  font-size: 1rem;
+}
+
+.ticket-btn.info-btn {
+  background-color: #c0c0c0;
+  color: #2b2b2b;
+}

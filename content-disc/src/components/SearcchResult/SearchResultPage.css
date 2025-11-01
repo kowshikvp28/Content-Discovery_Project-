@@ -1,0 +1,7 @@
+@import '../../pages/MoviePlayer/MoviePlayer.css';
+.search-results-page .empty-state {
+  font-size: 1.2rem;
+  color: #a0a6b1;
+  text-align: center;
+  padding: 4rem 0;
+}

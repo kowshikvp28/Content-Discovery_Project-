@@ -1,0 +1,104 @@
+.hero-split-layout {
+  --main-bg: #181B1F;       
+  --card-bg: #23282E;   
+  --title-color: #D4C29A;
+  --text-color: #EAEAEA; 
+  --accent-hover: #e0b236;
+  background-color: var(--main-bg);
+
+}
+.hero-split-layout-background{
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+  min-height: 800px;
+  overflow: hidden;
+}
+.hero-text-content {
+  flex: 0 0 45%; 
+  height: 100%;
+  padding-right: 4rem;
+  box-sizing: border-box;
+}
+
+.hero-split-title {
+  font-family: 'Righteous', cursive;
+  font-size: 3.5rem;
+  color: var(--text-color);
+  margin: 0 0 1.5rem 0;
+}
+
+.hero-split-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #c5c8d0;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.hero-split-button {
+  background-color: var(--title-color);
+  color: var(--main-bg);
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-split-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.hero-slider-content {
+  object-fit: contain;
+  height: 800px;
+  flex: 1;
+  position: relative;
+  /* Gradient mask for soft left blend */
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%, black 100%);
+}
+
+.hero-slider-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Blurred overlay for maximum softness */
+.hero-slider-blur {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 110px;
+  background: linear-gradient(to right, var(--main-bg) 0%, transparent 100%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 992px) {
+  .hero-split-layout {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 5%;
+  }
+  .hero-text-content {
+    flex-basis: auto;
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+  .hero-slider-content {
+    width: 100%;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+  .hero-slider-blur {
+    display: none;
+  }
+}

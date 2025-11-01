@@ -1,0 +1,313 @@
+.membership-page {
+    --main-bg: #181B1F;      
+  --card-bg: #23282E;      
+  --title-color: #D4C29A;  
+  --text-color: #EAEAEA;    
+  --accent-hover: #e0b236; 
+}
+
+.membership-page {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 3rem 7rem;
+}
+
+.membership-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.membership-title {
+  font-family: 'Righteous', cursive;
+  font-size: 3.5rem;
+  color: var(--title-color);
+  margin: 0 0 1rem 0;
+}
+
+.membership-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #c5c8d0;
+}
+.membership-page section {
+  margin-bottom: 5rem;
+}
+.membership-page section h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 2.5rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.pricing-card {
+  background-color: var(--card-bg);
+  border: 1px solid #3a4149;
+  border-radius: 8px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card.featured {
+  border-color: var(--title-color);
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.featured-banner {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  background-color: var(--title-color);
+  color: var(--main-bg);
+  padding: 5px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.plan-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.plan-price {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--title-color);
+  margin: 0;
+}
+
+.plan-cycle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #a0a6b1;
+}
+
+.plan-description {
+  color: #c5c8d0;
+  margin: 1rem 0 2rem 0;
+  flex-grow: 1;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.plan-features li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.plan-features li::before {
+  content: '✓';
+  color: var(--title-color);
+  position: absolute;
+  left: 0;
+}
+
+.plan-button {
+  background-color: var(--title-color);
+  color: var(--main-bg);
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+}
+
+.plan-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.pricing-card:not(.featured) .plan-button {
+  background-color: transparent;
+  color: var(--title-color);
+  border: 2px solid var(--title-color);
+}
+.pricing-card:not(.featured) .plan-button:hover {
+  background-color: var(--title-color);
+  color: var(--main-bg);
+}
+
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+.comparison-table th, .comparison-table td {
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #3a4149;
+}
+.comparison-table th {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.comparison-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+}
+.comparison-table td:not(:first-child) {
+  font-size: 1.5rem;
+  color: var(--title-color);
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #3a4149;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-icon {
+  font-size: 2rem;
+  font-weight: 400;
+  transition: transform 0.3s ease;
+}
+.faq-icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+.faq-answer.open {
+  max-height: 200px; 
+}
+.faq-answer p {
+  padding: 0 0 1.5rem 0;
+  margin: 0;
+  color: #c5c8d0;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .membership-title { font-size: 2.5rem; }
+  .membership-page section h2 { font-size: 2rem; }
+  .pricing-grid { grid-template-columns: 1fr; }
+  .pricing-card.featured { transform: scale(1); }
+  .comparison-table { font-size: 0.9rem; }
+  .comparison-table th, .comparison-table td { padding: 1rem 0.5rem; }
+}
+@media (max-width: 480px) {
+  .membership-page { padding: 2rem 1rem; }
+  .membership-subtitle { font-size: 1rem; }
+  .plan-price { font-size: 2.5rem; }
+  .plan-name { font-size: 1.5rem; }
+  .plan-button { padding: 12px 16px; font-size: 0.9rem; }
+}
+
+.subscription-status {
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+}
+
+.success-message {
+  color: #a7e085;
+  background-color: rgba(167, 224, 133, 0.1);
+  border: 1px solid rgba(167, 224, 133, 0.5);
+}
+
+.error-message {
+  color: #ff8a8a;
+  background-color: rgba(255, 138, 138, 0.1);
+  border: 1px solid rgba(255, 138, 138, 0.5);
+}
+
+/* For the 'Current Plan' card */
+.pricing-card.current-plan {
+  border-color: var(--title-color, #D4C29A);
+  box-shadow: 0 0 20px rgba(212, 194, 154, 0.3);
+}
+
+.current-plan-banner {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  background-color: var(--title-color, #D4C29A);
+  color: var(--main-bg, #181B1F);
+  padding: 5px 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 0 0 5px 5px;
+}
+
+.pricing-card.current-plan .featured-banner {
+  top: 30px; 
+}
+
+/* For the disabled button */
+.plan-button:disabled {
+  background-color: #3a4149;
+  border-color: #3a4149;
+  color: #a0a6b1;
+  cursor: not-allowed;
+}
+.pricing-card.current-plan .plan-button:disabled {
+   background-color: var(--title-color, #D4C29A);
+   border-color: var(--title-color, #D4C29A);
+   color: var(--main-bg, #181B1F);
+   opacity: 0.7;
+}
+
+.loading-state {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #a0a6b1;
+  font-style: italic;
+}

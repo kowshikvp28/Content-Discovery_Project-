@@ -1,0 +1,181 @@
+.service-page {
+  --main-bg: #181B1F;      
+  --card-bg: #23282E;      
+  --title-color: #D4C29A;  
+  --text-color: #EAEAEA;    
+  --accent-hover: #e0b236; 
+}
+
+.service-page {
+background-color: var(--main-bg);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 3rem 10rem;
+  padding-top: 100px;
+}
+
+.service-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.service-title {
+  font-family: 'Righteous', cursive;
+  font-size: 3.5rem;
+  color: var(--title-color);
+  margin: 0 0 1rem 0;
+}
+
+.service-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: #c5c8d0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.service-section {
+  margin-bottom: 5rem;
+}
+
+.service-section h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 2.5rem;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #3a4149;
+  padding-bottom: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-item {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #3a4149;
+}
+
+.feature-item h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 1rem 0;
+}
+
+.feature-item p {
+  color: #c5c8d0;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.faq-search-container {
+  margin-bottom: 2rem;
+}
+
+.faq-search-input {
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 1px solid #3a4149;
+  border-radius: 6px;
+  padding: 14px;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+.faq-search-input:focus {
+  outline: none;
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 3px rgba(224, 178, 54, 0.2);
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.faq-item { border-bottom: 1px solid #3a4149; }
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 1.5rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-icon { font-size: 2rem; font-weight: 400; transition: transform 0.3s ease; }
+.faq-icon.open { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; }
+.faq-answer.open { max-height: 200px; }
+.faq-answer p { padding: 0 0 1.5rem 0; margin: 0; color: #c5c8d0; line-height: 1.7; }
+.faq-no-results { text-align: center; color: #a0a6b1; padding: 2rem; }
+
+/* --- Contact Form --- */
+.contact-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: -2rem auto 3rem;
+  color: #c5c8d0;
+  line-height: 1.7;
+}
+
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.form-row { display: flex; gap: 1.5rem; }
+.input-group { display: flex; flex-direction: column; width: 100%; color:#c5c8d0;}
+.input-group label { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.9rem; }
+.input-group input, .input-group select, .input-group textarea {
+  background-color: var(--card-bg);
+  border: 1px solid #3a4149;
+  border-radius: 6px;
+  padding: 14px;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+.input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 3px rgba(224, 178, 54, 0.2);
+}
+
+.submit-button {
+  background-color: var(--title-color);
+  color: var(--main-bg);
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+.submit-button:hover { background-color: var(--accent-hover); }
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .service-page { padding: 1.5rem; padding-top: 80px; }
+  .service-title { font-size: 2.5rem; }
+  .service-section h2 { font-size: 2rem; }
+  .form-row { flex-direction: column; }
+}

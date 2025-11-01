@@ -1,0 +1,87 @@
+
+.carousel-title {
+  font-family: 'Righteous', cursive;
+  font-size: 1.9rem;
+  color: var(--title-color);
+  margin-top: 1rem;
+  padding-left: 0; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.carousel-loading,
+.carousel-error {
+  color: #a0a6b1;
+  padding: 2rem 0;
+  font-style: italic;
+}
+.carousel-error {
+    color: #ff8a8a;
+}
+
+.card-list {
+  padding-top: 20px;
+  display: flex;
+  gap: 25px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 1.5rem; 
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.card-list::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-card {
+  position: relative;
+  border-radius: 8px; 
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #3a4149; 
+  flex-shrink: 0;
+  width: 230px; 
+  background-color: var(--card-bg);
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.movie-img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 20%, transparent);
+  color: #fff;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  text-align: left;
+}
+
+.movie-card:hover .movie-info {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.movie-info h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+  
+}

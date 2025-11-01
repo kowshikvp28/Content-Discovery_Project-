@@ -1,0 +1,220 @@
+/* --- Import Fonts & Define Theme --- */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Montserrat:wght@400;600;700&family=Bebas+Neue&display=swap');
+
+:root {
+  --main-bg: #181B1F;      
+  --card-bg: #23282E;      
+  --title-color: #D4C29A;  
+  --text-color: #EAEAEA;    
+  --accent-hover: #e0b236; 
+}
+
+.hero-marquee {
+  background-color: var(--main-bg);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center; 
+  overflow: hidden;
+  padding: 100px 5% 50px;
+  margin-top: 0; 
+  box-sizing: border-box;
+}
+
+.hero-background-slide {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center 30%;
+  transition: opacity 1.5s ease-in-out; 
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, rgba(24, 27, 31, 0.95) 90%); */
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     
+  gap: 3rem;               
+  width: 100%;
+  z-index: 2; 
+  text-align: center;      
+  box-sizing: border-box;
+}
+
+.marquee-container {
+  width: 100%;
+  max-width: 800px; 
+  height: 500px;
+}
+.marquee-border {
+    padding: 2rem 0; 
+}
+.marquee-title {
+  font-family: 'Righteous', cursive;
+  font-size: 5rem;
+  color: #FFE484; 
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFDD70;
+  animation: text-flicker 3s infinite alternate; 
+}
+.marquee-subtitle {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  margin: 0.5rem 0 2rem 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.ticket-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.ticket-btn {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem;
+  color: #3D2B1F; 
+  background-color: #f3e5ab;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  display: inline-flex; 
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 4px;
+}
+.ticket-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.ticket-icon { font-size: 1rem; }
+.ticket-btn.info-btn {
+    background-color: #c0c0c0;
+    color: #2b2b2b;
+}
+
+.subscription-panel {
+  width: 100%;
+  max-width: 900px; 
+  background-color: #181B1F; 
+  border: 0px solid #141619; 
+  padding: 2rem;
+  /* position: relative; */
+  /* background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e0b236' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E"); Subtle pattern */
+  box-sizing: border-box;
+}
+
+.panel-header 
+{
+   text-align: center; 
+  margin-bottom: 1.5rem; 
+}
+.panel-header h2 {
+    font-family: 'Righteous';
+    font-size: 4.3rem;
+    color: #e0b236;
+    margin: 0 0 2.2rem 0;
+    text-shadow: 1px 1px 2px #000;
+  }
+  .panel-header p {
+    font-family: sans-serif;
+    color: #d1d1d1;
+    font-size: 1.7rem;
+    line-height: 1.3;
+    margin: 0 0 4.4rem 0;
+}
+.panel-form { display: flex; flex-direction: column; gap: 1.3rem; }
+.panel-form input {
+    background-color: #333;
+    border: none;
+    border-bottom: 2px solid #141619;
+    color: #fff;
+    padding: 12px;
+    font-size: 1.4rem;
+    transition: border-color 0.3s ease;
+}
+.panel-form input:focus {
+    outline: none;
+    border-bottom-color: #1d1f23;
+}
+.panel-subscribe-btn {
+    background-color: var(--title-color);
+  color: var(--main-bg);
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+.panel-subscribe-btn:hover { background-color: #ffca41; }
+.panel-subscribe-btn:disabled { background-color: #7a621d; cursor: wait; }
+
+.panel-success-msg { 
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #a7e085;
+    padding: 1rem 0 0; 
+    margin: 0;
+}
+.panel-header.submitted h2 { font-size: 3rem; } 
+.panel-header.submitted p { font-size: 1rem; }
+
+.error-message { 
+  color: #ff8a8a;
+  background-color: rgba(255, 138, 138, 0.1);
+  border: 1px solid rgba(255, 138, 138, 0.5);
+  border-radius: 4px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: -0.5rem; 
+  margin-bottom: 1rem;
+}
+
+.panel-loading { 
+    text-align: center;
+    padding: 2rem;
+    color: #a0a6b1;
+    font-style: italic;
+}
+
+
+/* --- Animations --- */
+@keyframes text-flicker {
+  0%, 100% { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #FFDD70, 0 0 30px #FFDD70; }
+  50% { text-shadow: 0 0 8px #fff, 0 0 15px #fff, 0 0 25px #FFDD70, 0 0 40px #FFDD70; }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .hero-marquee { padding-top: 80px; } 
+  .marquee-title { font-size: 3.5rem; }
+  .marquee-subtitle { font-size: 1.2rem; }
+  .ticket-buttons { flex-direction: column; align-items: center; }
+  .ticket-btn { width: 200px; justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .marquee-title { font-size: 2.5rem; }
+  .marquee-subtitle { font-size: 1rem; }
+  .panel-header h2 { font-size: 1.6rem; }
+}

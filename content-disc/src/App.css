@@ -1,0 +1,26 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;   
+    
+}
+
+/* :root {
+  --main-bg: #181B1F;
+  --card-bg: #23282E;
+  --title-color: #D4C29A;
+  --text-color: #EAEAEA; 
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+}
+
+.cards-section h3 {
+  color: var(--title-color);
+}
+
+.movie-card {
+  background-color: var(--card-bg);
+} */

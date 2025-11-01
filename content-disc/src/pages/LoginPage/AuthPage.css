@@ -1,0 +1,203 @@
+.auth-page {
+  --main-bg: #181B1F;      
+  --card-bg: #23282E;      
+  --title-color: #D4C29A;  
+  --text-color: #EAEAEA;    
+  --accent-hover: #e0b236; 
+}
+
+.error-message {
+  color: #ff8a8a; 
+  background-color: rgba(255, 138, 138, 0.1); 
+  border: 1px solid rgba(255, 138, 138, 0.5); 
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.25rem; 
+}
+
+.success-message {
+  color: #a7e085;
+  background-color: rgba(167, 224, 133, 0.1); 
+  border: 1px solid rgba(167, 224, 133, 0.5);
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.25rem; 
+}
+
+.auth-page {
+  background-color: var(--main-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  background-image:
+    linear-gradient(rgba(24, 27, 31, 0.8), rgba(24, 27, 31, 0.95)),
+    url('https://www.themoviedb.org/t/p/original/a1A8OcL5H58t4sZv9q1p5Yd5wLI.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: var(--card-bg);
+  border: 1px solid #3a4149;
+  border-radius: 8px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 15px 50px rgba(0,0,0,0.6);
+}
+
+.auth-card.register-card {
+  max-width: 700px;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.auth-logo {
+  font-family: 'Righteous', cursive;
+  font-size: 2.5rem;
+  color: var(--title-color);
+  margin: 0 auto 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--title-color);
+  border-radius: 50%;
+}
+
+.auth-header h1 {
+  color: var(--text-color);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.auth-header p {
+  color: #a0a6b1;
+  margin: 0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select {
+  background-color: #1a1e24;
+  border: 1px solid #3a4149;
+  border-radius: 6px;
+  padding: 14px;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 0 3px rgba(224, 178, 54, 0.2);
+}
+
+.auth-button {
+  background-color: var(--title-color);
+  color: var(--main-bg);
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.auth-footer {
+  text-align: right;
+  margin: 0.75rem 0;
+}
+
+.auth-footer a {
+  color: var(--title-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-redirect {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #3a4149;
+}
+
+.auth-redirect p {
+  color: #a0a6b1;
+  margin: 0;
+}
+
+.auth-redirect a {
+  color: var(--title-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+.auth-redirect a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .auth-card.register-card {
+    padding: 2rem 1.5rem;
+  }
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
